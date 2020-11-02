@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+<body>
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ if not .Params.book }}
+      {{ partial "inline-nav.html" . }}
+      <!-- <hr> -->
+    {{ end }}
+    <div class="post__content">
+      {{ .Content }}
+    </div>
+    {{ if not .Params.book }}
+      <!-- <hr> -->
+      {{ partial "inline-nav.html" . }}
+      <br><br>
+    {{ end }}
+  </div>
+</body>

@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+<body>
+  <main class="container" id="main">
+    <br><br>
+    <hr>
+    <h1 class="text-center">Books</h1>
+    <hr>
+    <br><br>
+
+    {{ with .GetPage "/book" }}
+      {{ range where .Pages.ByTitle "Params.book" true}}
+        {{ .Render "summary" }}
+      {{ end }}
+    {{ end }}
+  </main>
+</body>

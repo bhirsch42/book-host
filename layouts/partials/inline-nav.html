@@ -1,0 +1,15 @@
+<div class="d-flex">
+  <div class="col justify-content-start">
+    {{ if in .Params.prev "part" }}
+      <a class="btn btn-emoji" href="../{{ .Params.prev }}">👈</a>
+    {{ end }}
+  </div>
+  <div class="col justify-content-center">
+    <a class="btn btn-emoji" href="../..">📖</a>
+  </div>
+  <div class="col justify-content-end">
+    {{ if in .Params.next "part" }}
+      <a class="btn btn-emoji" href="../{{ .Params.next }}">👉</a>
+    {{ end }}
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<head>
+  {{ $style := resources.Get "styles/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
+</head>
+
+<header class="text-center">
+  <a href="/" class="display-1">📚</a>
+</header>

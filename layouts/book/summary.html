@@ -1,0 +1,9 @@
+<article class="post">
+  <h2>
+    <a href='{{ .Permalink }}'>{{ .Title }}</a>
+  </h2>
+  <span class="author">{{ .Params.creator }}</span>
+  <span>,</span>
+  <span class="date"> {{ .Date.Format "2006"}}</span>
+  <br><br>
+</article>
