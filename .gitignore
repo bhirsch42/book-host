@@ -3,3 +3,6 @@
 /public
 /static
 /node_modules
+/resources
+.DS_Store
+config.toml
