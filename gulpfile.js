@@ -83,7 +83,7 @@ function unzipBooks() {
 }
 
 function parsePages() {
-  return src('gulp-src/tmp/books/*_files/**/*.html', { base: 'gulp-src/tmp/books' })
+  return src('gulp-src/tmp/books/*_files/**/*.{html,xhtml}', { base: 'gulp-src/tmp/books' })
     .pipe(each((content, file, cb) => {
       let $ = cheerio.load(content)
 
